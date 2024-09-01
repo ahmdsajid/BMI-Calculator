@@ -1,5 +1,6 @@
 import 'package:bmi_app/home.dart';
 import 'package:bmi_app/result.dart';
+import 'package:bmi_app/splashpage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       ),
         useMaterial3: true,
       ),
-      home: Home(),
+      home: Splashpage(),
     );
   }
 }
