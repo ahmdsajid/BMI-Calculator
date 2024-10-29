@@ -19,15 +19,15 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         
-      scaffoldBackgroundColor: Color(0xff1d1c1b),
+      scaffoldBackgroundColor: const Color(0xff1d1c1b),
       fontFamily: GoogleFonts.lato().fontFamily,
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         centerTitle: true,
         backgroundColor: Color(0xff1d1c1b)
       ),
         useMaterial3: true,
       ),
-      home: Splashpage(),
+      home: const Splashpage(),
     );
   }
 }

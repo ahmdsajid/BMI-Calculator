@@ -24,13 +24,13 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar:AppBar(
         title: 
-        Row(
+        const Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children:[
             Icon(Icons.bar_chart,size: 40,color: Colors.amber,),
             SizedBox(width: 1,),
             Padding(
-              padding: const EdgeInsets.only(top: 10.0),
+              padding: EdgeInsets.only(top: 10.0),
               child: Text('BMI Calculator', style: TextStyle(color: Color(0xffc4eb08),fontWeight: FontWeight.bold),),
             ),
           ],
@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
       automaticallyImplyLeading: false,
       
       
-        actions: [IconButton(onPressed: (){}, icon: Icon(Icons.menu,size: 35,color: Colors.white,))],
+        actions: [IconButton(onPressed: (){}, icon: const Icon(Icons.menu,size: 35,color: Colors.white,))],
       ),
       body: Column(children: [
         Expanded(child: Row(children: [
@@ -53,12 +53,12 @@ class _HomeState extends State<Home> {
               child: Container(
                 decoration: BoxDecoration(
                   
-                  color: ismale == true ? Color(0xff3E5C35) : Color(0xff2b3728),
+                  color: ismale == true ? const Color(0xff3E5C35) : const Color(0xff2b3728),
                   borderRadius: BorderRadius.circular(25),
                 
                 ),
-                margin: EdgeInsets.all(10),
-                child: Column(
+                margin: const EdgeInsets.all(10),
+                child: const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.male_outlined, size: 50, color: Color(0xffd1f42b),),
@@ -75,12 +75,12 @@ class _HomeState extends State<Home> {
               },
               child: Container(
                 decoration: BoxDecoration(
-                  color: ismale == false ? Color(0xff3E5C35) : Color(0xff2b3728),
+                  color: ismale == false ? const Color(0xff3E5C35) : const Color(0xff2b3728),
                     borderRadius: BorderRadius.circular(25),
                 
                   ),
-                  margin: EdgeInsets.all(10),
-                    child: Column(
+                  margin: const EdgeInsets.all(10),
+                    child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(Icons.female_outlined, size: 50, color: Color(0xffd1f42b),),
@@ -94,21 +94,21 @@ class _HomeState extends State<Home> {
         Container(
           width: double.infinity,
             decoration: BoxDecoration(
-              color: Color(0xff2b3728),
+              color: const Color(0xff2b3728),
               borderRadius: BorderRadius.circular(25),
               
             ),
-            margin: EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text('Height',style: TextStyle(color: Colors.white, fontSize: 25,fontWeight: FontWeight.bold),),
-                Text("$height",style: TextStyle(color: Colors.white,fontSize: 50),),
+                const Text('Height',style: TextStyle(color: Colors.white, fontSize: 25,fontWeight: FontWeight.bold),),
+                Text("$height",style: const TextStyle(color: Colors.white,fontSize: 50),),
               Slider(
                 
                 max: 200,
                 min: 100,
-                activeColor: Color(0xffd1f42b),
+                activeColor: const Color(0xffd1f42b),
                 inactiveColor: Colors.black,
                 thumbColor: Colors.white,
                 value: height,
@@ -129,15 +129,15 @@ class _HomeState extends State<Home> {
           Expanded(child: 
           Container(
             decoration: BoxDecoration(
-              color: Color(0xff2b3728),
+              color: const Color(0xff2b3728),
               borderRadius: BorderRadius.circular(25),
               
             ),
-            margin: EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10),
             child:  Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-              Text('Weight', style: TextStyle(color: Colors.white, fontSize: 20,),),
+              const Text('Weight', style: TextStyle(color: Colors.white, fontSize: 20,),),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -147,34 +147,34 @@ class _HomeState extends State<Home> {
                   ),
                   minWidth: 8,
                   height: 50,
-                color: Color(0xffd1f42b),  
+                color: const Color(0xffd1f42b),  
                 onPressed: (){
                   setState(() {
                     Weight--;
                   });
                 }, 
-                child: Icon(Icons.remove, 
+                child: const Icon(Icons.remove, 
                 color: Colors.black, 
                 size: 20,),),
-                Text("$Weight", style: TextStyle(color: Colors.white, fontSize: 40,),),
+                Text("$Weight", style: const TextStyle(color: Colors.white, fontSize: 40,),),
                 MaterialButton(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15)
                   ),
                 minWidth: 8,
                 height: 50,
-                color: Color(0xffd1f42b),
+                color: const Color(0xffd1f42b),
                 onPressed: (){
                   setState(() {
                     Weight++;
                   });
                 }, 
-                child: Icon(Icons.add, 
+                child: const Icon(Icons.add, 
                 color: Colors.black, 
                 size: 20,),),
                 
               ],),
-              Text('Kg',style: TextStyle(color: Colors.white, fontSize: 20,),),
+              const Text('Kg',style: TextStyle(color: Colors.white, fontSize: 20,),),
             
             ], ),
             )),
@@ -182,15 +182,15 @@ class _HomeState extends State<Home> {
         Expanded(child: 
         Container(
             decoration: BoxDecoration(
-              color: Color(0xff2b3728),
+              color: const Color(0xff2b3728),
               borderRadius: BorderRadius.circular(25),
               
             ),
-            margin: EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-              Text('Age', style: TextStyle(color: Colors.white, fontSize: 20,),),
+              const Text('Age', style: TextStyle(color: Colors.white, fontSize: 20,),),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -200,34 +200,34 @@ class _HomeState extends State<Home> {
                   ),
                   minWidth: 8,
                   height: 50,
-                color: Color(0xffd1f42b),  
+                color: const Color(0xffd1f42b),  
                 onPressed: (){
                   setState(() {
                     Age--;
                   });
                 }, 
-                child: Icon(Icons.remove, 
+                child: const Icon(Icons.remove, 
                 color: Colors.black, 
                 size: 20,),),
-                Text("$Age", style: TextStyle(color: Colors.white, fontSize: 40,),),
+                Text("$Age", style: const TextStyle(color: Colors.white, fontSize: 40,),),
                 MaterialButton(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15)
                   ),
                 minWidth: 8,
                 height: 50,
-                color: Color(0xffd1f42b),
+                color: const Color(0xffd1f42b),
                 onPressed: (){
                   setState(() {
                     Age++;
                   });
                 }, 
-                child: Icon(Icons.add, 
+                child: const Icon(Icons.add, 
                 color: Colors.black, 
                 size: 20,),),
                 
               ],),
-              Text('Year',style: TextStyle(color: Colors.white, fontSize: 20,),),
+              const Text('Year',style: TextStyle(color: Colors.white, fontSize: 20,),),
             
             ], ),
           )),
@@ -249,10 +249,10 @@ class _HomeState extends State<Home> {
 
               ),));
 
-            }, 
+            },
+             color: const Color(0xff97b509), minWidth: 370, height: 65, 
             child: Text('CALCULATE',
-            style: TextStyle(color: Colors.black, fontSize: 25,fontWeight: FontWeight.bold),),
-             color: Color(0xff97b509), minWidth: 370, height: 65,),
+            style: TextStyle(color: Colors.black, fontSize: 25,fontWeight: FontWeight.bold),),),
         )
       ],),
     );
